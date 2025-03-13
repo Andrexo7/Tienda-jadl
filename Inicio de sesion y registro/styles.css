@@ -1,0 +1,130 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: rgb(0,0,0);
+   background: linear-gradient(90deg, rgb(0,0,61)0%,  rgb(1,75,160) 35%, rgb(140, 140, 140)100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+ 
+  
+  /* Contenedor de autenticación */
+  #contenedor {
+    background-color: #f0eeee;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+ 
+  
+ 
+  /* Estilos del formulario */
+  #contenedor h2 {
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    color: #131212;
+    margin-bottom: 10px;
+  }
+ 
+  #contenedor h6{
+    text-align: left;
+  }
+ 
+ 
+  #contenedor h3 {
+    font-size: 30px;
+    color: #050505;
+    margin-bottom: 20px;
+  }
+  
+  #contenedor img {
+    width: 100px;
+    margin: 20px 0;
+  }
+  
+  /* Estilos para los inputs */
+  input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    border-color: #00003d;
+    outline: none;
+  }
+  
+  /* Botones */
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #8c8c8c;
+    border: 1px solid #8c8c8c;
+    border-radius: 10px;
+    color: #050505;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #272727;
+  }
+  
+  /* Texto adicional */
+  p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  span {
+    color: #00a2ff;
+    cursor: pointer;
+  }
+  
+  span:hover {
+    text-decoration: underline;
+  }
+ 
+  .icon-close{
+    width: 100px;
+    height: 100px;
+    margin: 15px 0 15px 0;
+ }
+ 
+  
+  /* Formularios ocultos */
+  .hidden {
+    display: none;
+  }
+  
+  /* Media Query para pantallas pequeñas */
+  @media (max-width: 480px) {
+    #contenedor {
+      padding: 15px;
+    }
+  
+    input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }

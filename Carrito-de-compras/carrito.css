@@ -1,0 +1,260 @@
+*{
+    box-sizing: border-box;
+}
+
+/*Cuerpo completo de la pagina*/
+
+body{
+    margin: 0;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #014ba0;
+}
+    
+header{
+    justify-content: space-between;
+}
+
+
+/*Barra de navegacion en el encabezado*/
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #014ba0;
+    border: 2px solid #014ba0;
+    padding: 10px;
+    top: 0;
+    z-index: 10;
+}
+
+
+
+/*Logo de barra de navegacion*/
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    
+}
+
+/*Configuracion especificamente del logo*/
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/*Configuracion especifica del span que hace referencia al nombre de la tienda digital*/
+
+.navbar-logo span a {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+
+
+/*Configuracion del menu de  la barra de navegacion*/
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/*Configuracion de los links del menu del buscador de la barra de navegacion*/
+
+.navbar-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+    
+.navbar-menu a:hover {
+    background-color: #000000;
+    border-radius: 20px;
+}
+
+/*configuracion contador del carrito */
+
+#cuenta-carrito{
+    background-color: #000;
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    line-height: 20px;
+    aspect-ratio: 1;
+    text-align: center;
+    
+}
+
+.icon-close{
+    height: 50px;
+    margin-right: 20px;
+}
+
+.image-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+
+.image-container svg{
+    display:flex;
+    flex-wrap: wrap;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+   
+}
+
+.image-container svg:hover{
+    background-color:#000000;
+    border-radius: 20px;
+    z-index: 20;
+}
+.image-container > ul{
+background-color: rgb(247, 247, 247) !important;
+
+}
+
+.image-container > ul:hover{
+    background-color: white !important;
+    background-size: contain;
+}
+
+.icon-close2{
+    height: 15px;
+    width: 30px;
+    margin-right: 30px;
+}
+
+
+/* Asegurar que el menú desplegable se posicione correctamente */
+#options-menu {
+    position:absolute ;
+    top: 100%;
+    right: -0px ;
+    left: auto;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #000000;
+    width: 215px;
+    max-height: calc(100vh - 50px);
+}
+
+
+#options-menu.visible {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #ccc;
+    width: 200px;
+    display: none;
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0) !important;
+    flex-direction: row-reverse;
+    
+}
+
+ul li a:hover {
+    background-color:white !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.lista-redire{
+    text-align: center;
+    padding: 0;
+    display: inline;
+    margin-right: 15px;
+}
+
+/*Boton cerrar sesion*/
+
+#logout-btn {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+
+#logout-btn:hover {
+    background-color: #5b7dcf;
+}
+
+
+/* tarjetas productos que estan en el carrito*/
+#productos-container{
+    width: 700px;
+    margin:auto;
+}
+.tarjeta-articulo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+}
+
+.tarjeta-articulo img{
+    height: 150px;
+    width: 150px;
+    aspect-ratio: 1.5;
+
+}
+
+.tarjeta-articulo h3{
+    width: 200px;
+    text-transform: uppercase;
+    font-size:medium;
+}
+
+.tarjeta-articulo .precio{
+    width: 150px;
+    font-size: large;
+}
+
+#totales, #carrito-vacio{
+    text-align: center;
+
+}
+ 
+
+
+
+
+

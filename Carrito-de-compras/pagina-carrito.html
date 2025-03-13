@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pagina-carrito</title>
+  <link rel="stylesheet" href="/Carrito-de-compras/carrito.css">
+  <script src="/productos/articulos.js"></script>
+  <script src="/Carrito-de-compras/cartservice.js" defer></script>
+  <script src="/Carrito-de-compras/carrito.js" defer></script>
+
+</head>
+
+<body>
+
+
+  <!-- Barra de navegacion en el encabezado -->
+  <header class="navbar">
+    <!-- Logo de barra de navegacion -->
+    <div class="navbar-logo">
+
+      <img src="/imagenes/newlogo.jpeg" alt="Logo Tienda Jadl">
+
+      <span><a href="/shop.html">Click & Connect</a></span>
+
+    </div>
+
+
+
+    <!-- Menu de la barra de navegacion -->
+    <nav class="navbar-menu">
+
+      <a href="/shop.html">Inicio</a>
+
+      <a href="#">Categorias</a>
+
+      <a href="#">Ofertas disponibles</a>
+
+      <a href="/Carrito-de-compras/pagina-carrito.html" id="carrito"><img src="/imagenes/carrito.png" alt="carrito de compras"><span
+          id="cuenta-carrito">0</span></a>
+
+      <div class="image-container">
+        <svg xmlns="http://www.w3.org/2000/svg" alt="Usuario" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="icon-close" onclick="toggleMenu()">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+        <ul id="options-menu" class="hidden">
+          <li><a href="#">Informacion de usuario</a></li>
+          <li><a href="#">Compartir productos</a></li>
+          <li><a href="#">Favoritos</a></li>
+          <li id="logout-btn">Cerrar Sesión</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<main>
+  <p id="carrito-vacio">!UPSS no has agregado productos al carrito. <a href="/shop.html">agrega algunos👈</a></p>
+  <section id="productos-container"></section>
+  <section id="totales">
+    <p>Total unidades <span id="unidades">0</span></p>
+    <p>Total precio: $ <span id="preciototal">0</span></p>
+    <button disabled>comprar</button>
+    <button disabled>vaciar Carrito</button>
+  </section>
+</main>
+</body>
+
+
+
+</html>
