@@ -35,6 +35,24 @@ const articulos = [
     precio:"1.550.000",
 },
 
+{
+    id:6,
+    img:"imagenes/productos/6.png",
+    nombre: "xiaomi Redmi 14C",
+    precio:"450.000",
+},
+{
+    id:7,
+    img:"imagenes/productos/7.png",
+    nombre: "PS4 Slim",
+    precio:"1.600.000",
+},
+{
+    id:8,
+    img:"imagenes/productos/8.png",
+    nombre: "Redmi Pad SE",
+    precio:"550.000",
+},
 
 
 ]

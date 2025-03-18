@@ -14,12 +14,12 @@ function AgregarAlCarrito(producto) {
             nuevamemoria.push(getNuevoProductoParaMemoria(producto))
             cuenta = 1;
         } else {
-            nuevamemoria[indiceproducto].cantidad ++;
+            nuevamemoria[indiceproducto].cantidad++;
             cuenta = nuevamemoria[indiceproducto].cantidad;
         }
-         localStorage.setItem("articulos", JSON.stringify(nuevamemoria));
+        localStorage.setItem("articulos", JSON.stringify(nuevamemoria));
     }
-    actualizarNumeroCarrito(); 
+    actualizarNumeroCarrito();
     revisarMensajeVacio();
     return cuenta;
 }
@@ -50,8 +50,15 @@ function getNuevoProductoParaMemoria(producto) {
 const cuentaCarritoElement = document.getElementById("cuenta-carrito");
 function actualizarNumeroCarrito() {
     const memoria = JSON.parse(localStorage.getItem("articulos"));
-    const cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
-    cuentaCarritoElement.innerText = cuenta;
+    if (memoria && memoria.length > 0) {
+        const cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
+        cuentaCarritoElement.innerText = cuenta;
+        console.log(cuenta)
+    } else {
+        cuentaCarritoElement.innerText = 0;
+    }
 }
+
+
 
 actualizarNumeroCarrito();
