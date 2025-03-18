@@ -26,6 +26,7 @@ const unidadesElement = document.getElementById("unidades");
 const preciototalElement = document.getElementById("preciototal");
 const carritovacioElement = document.getElementById("carrito-vacio");
 const totalesElement = document.getElementById("totales");
+const vaciarCarritoElement = document.getElementById("vaciar");
 
 
 function crearTarjetasProductosInicio() {
@@ -40,10 +41,10 @@ function crearTarjetasProductosInicio() {
           <img src="/${articulo.img}" alt="Producto"${articulo.id}>
           <h3>${articulo.nombre}</h3>
           <h2 class="precio">$${articulo.precio}</h2>
-          <div>
-            <button>-</button>
+          <div >
+            <button class= "botones">-</button>
             <span class="cantidad">${articulo.cantidad}</span>
-            <button>+</button>
+            <button class= "botones">+</button>
           </div>
     `;
       contenedorTarjetas.appendChild(nuevoarticulo);
@@ -65,9 +66,14 @@ function crearTarjetasProductosInicio() {
 
     });
   }
+  actualizarTotales();
+  revisarMensajeVacio();
+  actualizarTotales();
+  actualizarNumeroCarrito();
 }
+
 crearTarjetasProductosInicio();
-actualizarTotales();
+
 
 function actualizarTotales() {
   const articulos = JSON.parse(localStorage.getItem("articulos"));
@@ -82,9 +88,10 @@ function actualizarTotales() {
     unidadesElement.innerText = unidades;
     preciototalElement.innerText = preciototal;
   }
+  revisarMensajeVacio();
 }
 
-revisarMensajeVacio();
+
 
 function revisarMensajeVacio(){
   const articulos = JSON.parse(localStorage.getItem("articulos"));
@@ -92,4 +99,17 @@ function revisarMensajeVacio(){
   carritovacioElement.classList.toggle("hidden",articulos && articulos.length>0);
   totalesElement.classList.toggle("hidden",!(articulos && articulos.length>0));
 }
+
+revisarMensajeVacio();
+
+
+
+vaciarCarritoElement.addEventListener("click",vaciarCarrito);
+function vaciarCarrito() {
+  localStorage.removeItem("articulos");
+  actualizarTotales();
+  crearTarjetasProductosInicio();
+  
+}
+
 

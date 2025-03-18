@@ -9,6 +9,7 @@ body{
     color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #014ba0;
+    
 }
     
 header{
@@ -21,8 +22,8 @@ header{
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #014ba0;
-    border: 2px solid #014ba0;
+    background-color: #00276c;
+    border: 2px solid #00276c;
     padding: 10px;
     top: 0;
     z-index: 10;
@@ -221,13 +222,16 @@ ul li a:hover {
 /* tarjetas productos que estan en el carrito*/
 #productos-container{
     width: 700px;
-    margin:auto;
+    margin-left: 55px;
+    float: left;
 }
 .tarjeta-articulo {
     display: flex;
-    gap: 20px;
     align-items: center;
     padding: 10px;
+    background-color:#272727 ;
+    margin: 10px;
+    border-radius: 20px;
 }
 
 .tarjeta-articulo img{
@@ -248,8 +252,58 @@ ul li a:hover {
     font-size: large;
 }
 
+#totales{
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+    margin-top:10px;
+    margin-left:200px ;
+    background-color: #272727;
+    border-radius: 20px;
+    float: left;
+}
+
+.botones{
+    padding: 5px 10px;
+    background-color: #014ba0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#vaciar{
+    padding: 5px 10px;
+    background-color: #014ba0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width:300px ;
+    margin: 10px;
+}
+
+#comprar{
+    padding: 5px 10px;
+    background-color: #014ba0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width:300px ;
+    margin: 10px;
+}
+    
+
 #totales, #carrito-vacio{
     text-align: center;
+
+}
+
+#carrito-vacio a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 20px;
 
 }
  
