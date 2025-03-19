@@ -1,28 +1,30 @@
 function AgregarAlCarrito(producto) {
-    const memoria = JSON.parse(localStorage.getItem("articulos"));
-    console.log(memoria)
-    let cuenta = 0;
-    if (!memoria) {
-        const nuevoproducto = getNuevoProductoParaMemoria(producto)
-        localStorage.setItem("articulos", JSON.stringify([nuevoproducto]));
-        cuenta = 1;
+    // Obtener el carrito de localStorage o inicializarlo si está vacío
+    let memoria = JSON.parse(localStorage.getItem("articulos")) || [];
+    
+    // Buscar si el producto ya está en el carrito
+    const indiceproducto = memoria.findIndex(articulo => articulo.id === producto.id);
+
+    if (indiceproducto === -1) {
+        // Si el producto no está en el carrito, lo agregamos con cantidad 1
+        memoria.push({
+            ...producto,
+            cantidad: 1,
+            precio: parseInt(producto.precio, 10) //Convertimos el precio a número
+        });
     } else {
-        const indiceproducto = memoria.findIndex(articulo => articulo.id === producto.id)
-        console.log(indiceproducto)
-        const nuevamemoria = memoria;
-        if (indiceproducto === -1) {
-            nuevamemoria.push(getNuevoProductoParaMemoria(producto))
-            cuenta = 1;
-        } else {
-            nuevamemoria[indiceproducto].cantidad++;
-            cuenta = nuevamemoria[indiceproducto].cantidad;
-        }
-        localStorage.setItem("articulos", JSON.stringify(nuevamemoria));
+        // Si el producto ya está en el carrito, aumentamos la cantidad
+        memoria[indiceproducto].cantidad++;
     }
+
+    // Guardamos el carrito actualizado en localStorage
+    localStorage.setItem("articulos", JSON.stringify(memoria));
+
+    // Actualizamos la UI (contador del carrito y mensaje de carrito vacío)
     actualizarNumeroCarrito();
     revisarMensajeVacio();
-    return cuenta;
 }
+
 
 function restarAlcarrito(producto) {
     const memoria = JSON.parse(localStorage.getItem("articulos"));

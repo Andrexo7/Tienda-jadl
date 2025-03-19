@@ -23,18 +23,19 @@ const contenedorTarjetas = document.getElementById("productos-container");
 function crearTarjetasProductosInicio(articulos){
     articulos.forEach(articulo => {
       const nuevoarticulo = document.createElement("div");
-      nuevoarticulo.classList = "tarjeta-articulo"
+      nuevoarticulo.classList.add("tarjeta-articulo");
+
       nuevoarticulo.innerHTML = `
       <div class="imgbox">
         <img src="./${articulo.img}" alt="Producto"${articulo.id}>
       </div>
       <div class="contentbox">
         <h3>${articulo.nombre}</h3>
-        <h2 class="precio">$${articulo.precio}</h2>
+         <h2 class="precio">$${articulo.precio.toLocaleString("es-CO")}</h2>
         <button>Agregar al carrito</button>
       </div>
 
-        `
+      `;
       contenedorTarjetas.appendChild(nuevoarticulo);
       nuevoarticulo.getElementsByTagName("button")[0].addEventListener("click",() => AgregarAlCarrito(articulo))
     });

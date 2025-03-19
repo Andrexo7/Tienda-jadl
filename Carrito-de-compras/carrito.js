@@ -40,7 +40,7 @@ function crearTarjetasProductosInicio() {
       nuevoarticulo.innerHTML = `
           <img src="/${articulo.img}" alt="Producto"${articulo.id}>
           <h3>${articulo.nombre}</h3>
-          <h2 class="precio">$${articulo.precio}</h2>
+          <h2 class="precio">$${articulo.precio.toLocaleString("es-CO")}</h2>
           <div >
             <button class= "botones">-</button>
             <span class="cantidad">${articulo.cantidad}</span>
@@ -76,7 +76,7 @@ crearTarjetasProductosInicio();
 
 
 function actualizarTotales() {
-  const articulos = JSON.parse(localStorage.getItem("articulos"));
+  const articulos = JSON.parse(localStorage.getItem("articulos")) || [];
   let unidades = 0;
   let preciototal = 0;
   if (articulos && articulos.length > 0) {
@@ -86,7 +86,12 @@ function actualizarTotales() {
 
     });
     unidadesElement.innerText = unidades;
-    preciototalElement.innerText = preciototal;
+    preciototalElement.innerText = preciototal.toLocaleString("es-CO", {
+      style: "currency",
+      currency: "COP",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    });
   }
   revisarMensajeVacio();
 }
