@@ -53,6 +53,25 @@ const articulos = [
     nombre: "Redmi Pad SE",
     precio:550000,
 },
+{
+    id:9,
+    img:"imagenes/productos/9.png",
+    nombre: "TV Samsung 55' pulgadas ",
+    precio:1945000,
+},
+{
+    id:10,
+    img:"imagenes/productos/10.png",
+    nombre: "mini consola retro 400",
+    precio:40000,
+},
+{
+    id:11,
+    img:"imagenes/productos/11.png",
+    nombre: "tv lg 50' pulgadas ",
+    precio:1599900 ,
+},
+
 
 
 ]
