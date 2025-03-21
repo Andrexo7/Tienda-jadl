@@ -7,7 +7,7 @@ logoutBtn.addEventListener('click', () => {
   console.log("Sesion cerrada con extito")
   alert('Sesión cerrada con éxito');
   // Redirigir al formulario de inicio de sesión
-  window.location.href = "index.html"; // Aquí va la URL del formulario de inicio de sesión
+  window.location.href = "/index.html"; // Aquí va la URL del formulario de inicio de sesión
 });
 
 
@@ -52,8 +52,10 @@ function crearTarjetasProductosInicio() {
         .getElementsByTagName("button")[1]
         .addEventListener("click", (e) => {
           const cuentaElement = e.target.parentElement.getElementsByTagName("span")[0];
-          cuentaElement.innerText = AgregarAlCarrito(articulo);;
+          cuentaElement.innerText = AgregarAlCarrito(articulo);
+          crearTarjetasProductosInicio();
           actualizarTotales();
+
         })
 
       nuevoarticulo

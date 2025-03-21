@@ -70,20 +70,55 @@ body{
 .navbar-menu {
     display: flex;
     align-items: center;
+    list-style: none;
+    height: auto;
+    margin: auto;
 }
 
 /*Configuracion de los links del menu del buscador de la barra de navegacion*/
 
-.navbar-menu a {
+.navbar-menu a{
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 15px 15px;
 }
     
-.navbar-menu a:hover {
+.navbar-menu li:hover {
     background-color: #000000;
+    padding: 10px ;
+    border-radius: 20px; ;
+}
+
+/*menu de categorias*/
+
+ .menu-categorias{
+    position:absolute;
+    display:none;
+    list-style: none;
+    margin-top: 10px;
+    width: 200px;
+    background-color: white;
     border-radius: 20px;
 }
+
+
+.navbar-menu li:hover .menu-categorias {
+    display: block;
+}
+
+
+.menu-categorias li:hover {
+    background-color: #96b3ff;
+}
+
+.menu-categorias li a{
+    display:block;
+    color: #000000;
+    padding: 15px 15px 15px 20px;
+}
+
+
+
 
 /*configuracion contador del carrito */
 
@@ -162,7 +197,7 @@ p{
     cursor: pointer;
 }
 
-ul {
+#options-menu ul{
     list-style: none;
     padding: 0;
     margin: 0;
@@ -175,21 +210,18 @@ ul {
     display: none;
 }
 
-ul li {
+#options-menu li {
     padding: 10px;
     border-bottom: 1px solid #ccc;
-    
-    
 }
 
-ul li a {
+#options-menu li a {
     text-decoration: none;
     color: black;
-    
 }
 
-ul li:hover {
-    background-color: #ffffff;
+#options-menu li:hover {
+    background-color:#96b3ff;
 }
 
 .hidden {
@@ -198,14 +230,9 @@ ul li:hover {
 
 .visible {
     display: block;
+    list-style: none;
 }
 
-.lista-redire{
-    text-align: center;
-    padding: 0;
-    display: inline;
-    margin-right: 15px;
-}
 
 /*Boton cerrar sesion*/
 
@@ -220,10 +247,6 @@ ul li:hover {
 }
 
 
-
-#logout-btn:hover {
-    background-color: #5b7dcf;
-}
 
 /* Fondo de bienvenida */
 

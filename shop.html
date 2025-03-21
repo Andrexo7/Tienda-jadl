@@ -16,61 +16,57 @@
     <!-- Barra de navegacion en el encabezado -->
     <header class="navbar">
         <!-- Logo de barra de navegacion -->
-            <div class="navbar-logo">
-
-                <img src="imagenes/newlogo.jpeg" alt="Logo Tienda Jadl">
-            
-                <span ><a href="/shop.html">Click & Connect</a></span>
-
-            </div>
-
-
-            <!-- Buscador de la barra de navegacion -->
-
-            <div class="navbar-search">
-                <form>
-                    <input type="search" placeholder="Buscar productos">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                      </svg>
-                      
-
+        <div class="navbar-logo">
     
-
-                </form>
-                
-            </div>
-            <!-- Menu de la barra de navegacion -->
-            <nav class="navbar-menu">
-
-                <a href="/shop.html">Inicio</a>
-
-                <a href="#">Categorias</a>
-
-                <a href="#">Ofertas disponibles</a>
-
-                <a href="Carrito-de-compras/pagina-carrito.html" id="carrito"><img src="imagenes/carrito.png" alt=""><span id="cuenta-carrito">0</span></a>
-
-               
-
-                  
-
-        
-                  
-            </nav>
-
-               <div class="image-container">
-                  <svg xmlns="http://www.w3.org/2000/svg" alt="Usuario" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close" onclick="toggleMenu()">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                  </svg>
-                  <ul id="options-menu" class="hidden">
-                    <li><a href="#">Informacion de usuario</a></li>
-                    <li><a href="#">Compartir productos</a></li>
-                    <li><a href="#">Favoritos</a></li>
-                    <li id="logout-btn">Cerrar Sesión</li> 
-                  </ul>
-                </div>
-              
+            <img src="imagenes/newlogo.jpeg" alt="Logo Tienda Jadl">
+    
+            <span><a href="/shop.html">Click & Connect</a></span>
+    
+        </div>
+        <!-- Buscador de la barra de navegacion -->
+    
+        <div class="navbar-search">
+            <form>
+                <input type="search" placeholder="Buscar productos">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon-close2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+            </form>
+        </div>
+        <!-- Menu de la barra de navegacion -->
+        <ul class="navbar-menu">
+    
+            <li> <a href="/shop.html">Inicio</a></li>
+    
+            <li><a href="#">Categorias</a>
+                <ul class="menu-categorias">
+                    <li><a href="#">Celulares</a></li>
+                    <li><a href="#">Consolas</a></li>
+                    <li><a href="#">Audio</a></li>
+                    <li><a href="#">TV</a></li>
+                    <li><a href="#">Ver todas</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="#">Ofertas disponibles</a></li>
+    
+            <li><a href="Carrito-de-compras/pagina-carrito.html" id="carrito"><img src="imagenes/carrito.png" alt=""><span id="cuenta-carrito">0</span></a></li>
+        </ul>
+    
+        <div class="image-container">
+            <svg xmlns="http://www.w3.org/2000/svg" alt="Usuario" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="icon-close" onclick="toggleMenu()">
+                <path stroke-linecap="round" stroke-linejoin="round"d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+            <ul id="options-menu" class="hidden">
+                <li><a href="#">Informacion de usuario</a></li>
+                <li><a href="#">Compartir productos</a></li>
+                <li><a href="#">Favoritos</a></li>
+                <li id="logout-btn">Cerrar Sesión</li>
+            </ul>
+        </div>
     </header>
 
     <div class="welcome-fondo">
