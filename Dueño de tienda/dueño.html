@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="dueño.css">
+</head>
+<body>
+    <h1>Gestión de Productos</h1>
+    
+    <!-- Botón para mostrar el formulario de añadir productos -->
+    <button id="addProductBtn">Añadir un producto</button>
+    
+    <!-- Formulario para añadir un nuevo producto -->
+    <div id="productForm" style="display: none;">
+        <h2>Añadir Producto</h2>
+        <!-- Campo para el nombre del producto -->
+        <input type="text" id="productName" placeholder="Nombre del producto" required>
+        <!-- Campo para la categoría del producto -->
+        <input type="text" id="productCategory" placeholder="Categoría" required>
+        <!-- Campo para el precio del producto -->
+        <input type="number" id="productPrice" placeholder="Precio" required>
+        <!-- Campo para la descripción del producto -->
+        <textarea id="productDescription" placeholder="Descripción" required></textarea>
+        <!-- Campo para la imagen del producto -->
+        <input type="file" id="productImage" accept="image/*" required>
+        <!-- Botón para guardar el producto -->
+        <button onclick="saveProduct()">Guardar Producto</button>
+    </div>
+    
+    <!-- Sección donde se mostrarán los productos publicados -->
+    <h2>Productos Publicados</h2>
+    <div id="productList"></div>
+    
+    <script src="dueño.js"></script>
+</body>
+</html>

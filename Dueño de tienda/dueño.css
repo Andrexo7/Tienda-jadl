@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+h1, h2 {
+    text-align: center;
+}
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#productForm {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#productForm input, #productForm textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+#productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product-card {
+    background: white;
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product-card img {
+    max-width: 100%;
+}
+.actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.discount {
+    color: red;
+}
