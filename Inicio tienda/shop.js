@@ -20,12 +20,13 @@ function toggleMenu() {
 const contenedorTarjetas = document.getElementById("productos-container");
  
 /** Crea las tarjetas de productos teniendo en cuenta la lista en productos.js */
-function crearTarjetasProductosInicio(articulos){
-    articulos.forEach(articulo => {
-      const nuevoarticulo = document.createElement("div");
-      nuevoarticulo.classList.add("tarjeta-articulo");
+function crearTarjetasProductosInicio(productosvisibles) {
+  contenedorTarjetas.innerHTML = ""
+  productosvisibles.forEach(articulo => {
+    const nuevoarticulo = document.createElement("div");
+    nuevoarticulo.classList.add("tarjeta-articulo");
 
-      nuevoarticulo.innerHTML = `
+    nuevoarticulo.innerHTML = `
       <div class="imgbox">
         <img src="./${articulo.img}" alt="Producto"${articulo.id}>
       </div>
@@ -33,12 +34,55 @@ function crearTarjetasProductosInicio(articulos){
         <h3>${articulo.nombre}</h3>
          <h2 class="precio">$${articulo.precio.toLocaleString("es-CO")}</h2>
         <button>Agregar al carrito</button>
+        <h6 class="categoria">${articulo.categoria}
       </div>
 
       `;
-      contenedorTarjetas.appendChild(nuevoarticulo);
-      nuevoarticulo.getElementsByTagName("button")[0].addEventListener("click",() => AgregarAlCarrito(articulo))
-    });
-  }
+    contenedorTarjetas.appendChild(nuevoarticulo);
+    nuevoarticulo.getElementsByTagName("button")[0].addEventListener("click", () => AgregarAlCarrito(articulo))
+  });
+}
+
+//filtrar creacion de tarjetas de productos segun su categoria//
+
+const filterProducts = (categoria) => {
+  const productosvisibles = articulos.filter(articulo => articulo.categoria === categoria)
+  crearTarjetasProductosInicio(productosvisibles)
+
+}
+
+//funcion de los botones de el menu de categorias//
+
+const btntodas = document.getElementById("btntodas");
+const btnconsolas = document.getElementById("btnconsolas");
+const btcelulares = document.getElementById("btncelulares");
+const btntv = document.getElementById("btntv");
+const btnaudio = document.getElementById("btnaudio");
+const btntablets = document.getElementById("btntablets");
+
+btntodas.addEventListener("click", () => {
   crearTarjetasProductosInicio(articulos);
+});
+
+btnconsolas.addEventListener("click", () => {
+  filterProducts('Consolas');
+});
+
+btcelulares.addEventListener("click", () => {
+  filterProducts('Celulares');
+});
+
+btntv.addEventListener("click", () => {
+  filterProducts('TV');
+});
+
+btnaudio.addEventListener("click", () => {
+  filterProducts('Audio');
+});
+
+btntablets.addEventListener("click", () => {
+  filterProducts('Tablets');
+});
+
+crearTarjetasProductosInicio(articulos);
 

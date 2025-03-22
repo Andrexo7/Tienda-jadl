@@ -15,6 +15,7 @@ body{
 
 .navbar {
     display: flex;
+    flex-grow: 1;
     align-items: center;
     background-color: #00276c;
     border: 2px solid #00276c;
@@ -91,14 +92,13 @@ body{
 
 /*menu de categorias*/
 
- .menu-categorias{
+.menu-categorias{
     position:absolute;
     display:none;
     list-style: none;
     margin-top: 10px;
     width: 200px;
-    background-color: white;
-    border-radius: 20px;
+    text-align: center;
 }
 
 
@@ -107,14 +107,18 @@ body{
 }
 
 
-.menu-categorias li:hover {
+.menu-categorias button:hover {
     background-color: #96b3ff;
 }
 
-.menu-categorias li a{
-    display:block;
+.menu-categorias button{
+    display:flex;
     color: #000000;
-    padding: 15px 15px 15px 20px;
+    padding: 15px 15px 15px 15px;
+    min-width: 100%;
+    border-color: transparent;
+    cursor: pointer;
+    
 }
 
 
