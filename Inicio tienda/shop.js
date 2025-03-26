@@ -42,3 +42,11 @@ function crearTarjetasProductosInicio(articulos){
   }
   crearTarjetasProductosInicio(articulos);
 
+let tiempo= 0;
+function actualizarTiempo(){
+  tiempo++;
+  document.getElementById("tiempo").textContent=tiempo;
+}
+
+setInterval(actualizarTiempo,1000);
+
