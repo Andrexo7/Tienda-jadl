@@ -8,7 +8,7 @@ body{
     margin: 0;
     color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #014ba0;
+    background-color: #272727;
 }
     
 /*Barra de navegacion en el encabezado*/
@@ -254,8 +254,9 @@ p{
 
 /* Fondo de bienvenida */
 
-.welcome-container{
-    background-color: white;
+
+.welcome-container {
+    background-color: white ;
     padding: 20px;
     border-radius: 15px;
     border-color: #f2f564;
@@ -263,7 +264,7 @@ p{
     color: black;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     margin: 50px auto;
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .welcome-title{
@@ -272,7 +273,57 @@ p{
 }
 
 .img-fondo{
-    width: 300px;
+    width: 150px;
+}
+
+/* mensaje que se  muestra cuando no hay resultados para la busqueda*/
+.sinResultados {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.sinResultados img {
+    width: 80px;
+    opacity: 0.7;
+}
+
+.sinResultados h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.sinResultados ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.sinResultados li {
+    font-size: 14px;
+    color: #555;
+    padding: 5px 0;
+}
+
+.sinResultados li::before {
+    content: "• ";
+    color: #007bff;
+    font-weight: bold;
+}
+
+/*titulo de la categoria en pantalla*/
+.titulo{
+    background-color: rgb(0, 0, 0) ;
+    padding: 20px;
+    border-radius: 15px;
+    color: rgb(255, 252, 252);
+    margin: 20px auto;
+    max-width: 500px;
 }
 
 /*tarjetas de productos */
@@ -284,13 +335,14 @@ p{
 }
 #productos-container{
     display: flex;
-    gap: 20px;
+    gap:20px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #272727;
-
+    overflow-y: hidden;
+    margin-top: 50px;
 }
 .tarjeta-articulo{
     position: relative;
@@ -301,6 +353,7 @@ p{
     overflow: hidden;
     margin-top: 50px;
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3);
+    bottom: 20px;
 }
 
 .tarjeta-articulo::before{

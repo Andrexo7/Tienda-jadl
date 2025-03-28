@@ -64,7 +64,7 @@ const articulos = [
 {
     id:9,
     img:"imagenes/productos/9.png",
-    nombre: "TV Samsung 55' pulgadas ",
+    nombre: "TV Samsung 55' pulgadas",
     precio:1945000,
     categoria:"TV"
 },
@@ -78,8 +78,106 @@ const articulos = [
 {
     id:11,
     img:"imagenes/productos/11.png",
-    nombre: "tv lg 50' pulgadas ",
+    nombre: "tv lg 50' pulgadas",
     precio:1599900 ,
+    categoria:"TV"
+},
+{
+    id:12,
+    img:"imagenes/productos/12.png",
+    nombre: "samsung galaxy A05s",
+    precio:563000 ,
+    categoria:"Celulares"
+},
+{
+    id:13,
+    img:"imagenes/productos/13.png",
+    nombre: "samsung galaxy s24 ultra",
+    precio:4580900 ,
+    categoria:"Celulares"
+},
+{
+    id:14,
+    img:"imagenes/productos/14.png",
+    nombre: "iphone 13 pro max",
+    precio:2470000 ,
+    categoria:"Celulares"
+},
+{
+    id:15,
+    img:"imagenes/productos/15.png",
+    nombre: "lenovo tab m11 ",
+    precio:729270 ,
+    categoria:"Tablets"
+},
+{
+    id:16,
+    img:"imagenes/productos/16.png",
+    nombre: "Motorola g54 5g",
+    precio:599000 ,
+    categoria:"Celulares"
+},
+{
+    id:17,
+    img:"imagenes/productos/17.png",
+    nombre: "parlante alexa 5ª Gen",
+    precio:199000 ,
+    categoria:"Audio"
+},
+{
+    id:18,
+    img:"imagenes/productos/18.png",
+    nombre: "xbox series s",
+    precio:1696000 ,
+    categoria:"Consolas"
+},
+{
+    id:19,
+    img:"imagenes/productos/19.png",
+    nombre: "lenovo tab p12",
+    precio:1908000 ,
+    categoria:"Tablets"
+},
+{
+    id:20,
+    img:"imagenes/productos/20.png",
+    nombre: "samsung galaxy tab a9+",
+    precio:716900 ,
+    categoria:"Tablets"
+},
+{
+    id:21,
+    img:"imagenes/productos/21.png",
+    nombre: "ipad 10 generacion",
+    precio:1484900 ,
+    categoria:"Tablets"
+},
+{
+    id:22,
+    img:"imagenes/productos/22.png",
+    nombre: "ps5 slim digital",
+    precio:1999990 ,
+    categoria:"Consolas"
+},
+{
+    id:23,
+    img:"imagenes/productos/23.png",
+    nombre: "tv hisense 58' ",
+    precio:1799900 ,
+    categoria:"TV"
+},
+{
+    id:24,
+    img:"imagenes/productos/24.png",
+    nombre: "tv caixun 50' ",
+    precio:1399000 ,
+    categoria:"TV"
+},
+{
+    id:24,
+    img:"imagenes/productos/25.png",
+    nombre: "tv tcl 32' ",
+    precio:739900 ,
     categoria:"TV"
 },
 

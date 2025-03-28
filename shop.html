@@ -17,17 +17,17 @@
     <header class="navbar">
         <!-- Logo de barra de navegacion -->
         <div class="navbar-logo">
-    
+
             <img src="imagenes/newlogo.jpeg" alt="Logo Tienda Jadl">
-    
+
             <span><a href="/shop.html">Click & Connect</a></span>
-    
+
         </div>
         <!-- Buscador de la barra de navegacion -->
-    
+
         <div class="navbar-search">
             <form>
-                <input type="search" placeholder="Buscar productos">
+                <input type="search" id="searchInput" placeholder="Buscar Productos">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="icon-close2">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -35,31 +35,35 @@
                 </svg>
             </form>
         </div>
+
+
         <!-- Menu de la barra de navegacion -->
         <ul class="navbar-menu">
-    
+
             <li> <a href="/shop.html">Inicio</a></li>
-    
+
             <li><a href="#">Categorias</a>
-                <div class="menu-categorias">
+                <div class="menu-categorias" id="Categorias">
                     <button id="btntodas">Ver Todas😎</button>
-                    <button id="btnconsolas" >Consolas🎮</button>
-                    <button id="btnaudio" >Audio🎶</button>
-                    <button id="btntv" >TV📺</button>
-                    <button id="btncelulares" >Celulares📱</button>
-                    <button id="btntablets" >Tablets📔</button>
+                    <button id="btnconsolas">Consolas🎮</button>
+                    <button id="btnaudio">Audio🎶</button>
+                    <button id="btntv">TV📺</button>
+                    <button id="btncelulares">Celulares📱</button>
+                    <button id="btntablets">Tablets📔</button>
                 </div>
             </li>
-    
+
             <li><a href="#">Ofertas disponibles</a></li>
-    
-            <li><a href="Carrito-de-compras/pagina-carrito.html" id="carrito"><img src="imagenes/carrito.png" alt=""><span id="cuenta-carrito">0</span></a></li>
+
+            <li><a href="Carrito-de-compras/pagina-carrito.html" id="carrito"><img src="imagenes/carrito.png"
+                        alt=""><span id="cuenta-carrito">0</span></a></li>
         </ul>
-    
+
         <div class="image-container">
             <svg xmlns="http://www.w3.org/2000/svg" alt="Usuario" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="icon-close" onclick="toggleMenu()">
-                <path stroke-linecap="round" stroke-linejoin="round"d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
             </svg>
             <ul id="options-menu" class="hidden">
                 <li><a href="#">Informacion de usuario</a></li>
@@ -70,22 +74,40 @@
         </div>
     </header>
 
-    <div class="welcome-fondo">
+    <!-- mensaje de bienvenida -->
+    <div class="welcomeFondo" id="welcomeFondo">
         <div class="welcome-container">
             <h1 class="welcome-title">!Bienvenido a Click & Connect¡</h1>
-            <p class="welcome-text">Acercate a la tecnologia con  la variedad de productos que tenemos para ti a los mejores precios</p>
+            <p class="welcome-text">Acercate a la tecnologia con la variedad de productos que tenemos para ti a los
+                mejores
+                precios</p>
             <img class="img-fondo" src="imagenes/newlogo.jpeg" alt="Logo Tienda Jadl">
         </div>
-    </div>
-    
 
-    
+    </div>
+
+    <!--mensaje que se muestra si no hay resultados al buscar algo en la barra de navegacion-->
+    <div class="sinResultados" id="sinResultados">
+        <img src="/imagenes/busqueda.gif" alt="sin resultados">
+        <h3>No hay publicaciones que coincidan con tu búsqueda.</h3>
+        <ul>
+            <li>Revisa la ortografía de la palabra.</li>
+            <li>Utiliza palabras más genéricas o menos palabras.</li>
+            <li>Navega por las categorías para encontrar un producto similar</li>
+        </ul>
+    </div>
+
+
+    <!--mostrar que categoria se esta mostrando -->
+    <section id="titulo"></section>
+
+
     <!--tarjetas de productos-->
 
     <section id="productos-container">
     </section>
 
-    
+
 </body>
 
 
