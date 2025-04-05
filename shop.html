@@ -9,7 +9,7 @@
     <script src="productos/articulos.js"></script>
     <script src="Inicio tienda/shop.js" defer></script>
     <script src="./Carrito-de-compras/cartservice.js"defer></script>
-    <link rel="shortcut icon" href="imagenes/newlogo.jpeg">
+    <link rel="shortcut icon" href="imagenes/newlogo.png">
 </head>
 <!-- Cuerpo de la pagina -->
 <body>
@@ -18,7 +18,7 @@
         <!-- Logo de barra de navegacion -->
         <div class="navbar-logo">
 
-            <img src="imagenes/newlogo.jpeg" alt="Logo Tienda Jadl">
+            <img src="imagenes/newlogo.png" alt="Logo Tienda Jadl">
 
             <span><a href="/shop.html">Click & Connect</a></span>
 
@@ -55,10 +55,12 @@
 
             <li><a href="#">Ofertas disponibles</a></li>
 
-            <li><a href="Carrito-de-compras/pagina-carrito.html" id="carrito"><img src="imagenes/carrito.png"
-                        alt=""><span id="cuenta-carrito">0</span></a></li>
-        </ul>
+            <li><a href="Carrito-de-compras/pagina-carrito.html" id="carrito"><img class="carrito" src="imagenes/carrito.png" alt="carrito de Carrito-de-compras"><span
+                        id="cuenta-carrito">0</span></a>
+            </li>
 
+        </ul>
+        
         <div class="image-container">
             <svg xmlns="http://www.w3.org/2000/svg" alt="Usuario" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="icon-close" onclick="toggleMenu()">
@@ -81,7 +83,7 @@
             <p class="welcome-text">Acercate a la tecnologia con la variedad de productos que tenemos para ti a los
                 mejores
                 precios</p>
-            <img class="img-fondo" src="imagenes/newlogo.jpeg" alt="Logo Tienda Jadl">
+            <img class="img-fondo" src="imagenes/newlogo.png" alt="Logo Tienda Jadl">
         </div>
 
     </div>
@@ -107,9 +109,10 @@
     <section id="productos-container">
     </section>
 
-    <div>
-        <p>Tiempo en linea:<span id="tiempo">0</span></p>
-</div>
+    <div class="tiempo">
+        <p>Tiempo en linea: <span id="tiempo">0</span> seg</p>
+
+    </div>
 
    
 

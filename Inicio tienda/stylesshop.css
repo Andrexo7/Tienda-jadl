@@ -8,7 +8,7 @@ body{
     margin: 0;
     color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #272727;
+    background-color: #1E1E1E;
 }
     
 /*Barra de navegacion en el encabezado*/
@@ -17,8 +17,8 @@ body{
     display: flex;
     flex-grow: 1;
     align-items: center;
-    background-color: #00276c;
-    border: 2px solid #00276c;
+    background-color: #2A2A2A;
+    border: 2px solid #2A2A2A ;
     padding: 10px;
     position: sticky;
     top: 0;
@@ -84,10 +84,20 @@ body{
     padding: 15px 15px;
 }
     
+.navbar-menu li{
+    padding: 10px 0px;
+    border-radius: 20px; 
+    margin-right: 10px;
+}
 .navbar-menu li:hover {
-    background-color: #000000;
-    padding: 10px ;
-    border-radius: 20px; ;
+    background-color: #0D6EFD;
+    padding: 10px 0px;
+    border-radius: 20px;
+}
+
+.carrito{
+    height: 25px;
+    width: 25px;
 }
 
 /*menu de categorias*/
@@ -113,12 +123,11 @@ body{
 
 .menu-categorias button{
     display:flex;
-    color: #000000;
+    color: #000;
     padding: 15px 15px 15px 15px;
     min-width: 100%;
     border-color: transparent;
     cursor: pointer;
-    
 }
 
 
@@ -127,7 +136,7 @@ body{
 /*configuracion contador del carrito */
 
 #cuenta-carrito{
-    background-color: #000;
+    background-color: #0D6EFD;
     border-radius: 100%;
     display: inline-block;
     width: 20px;
@@ -158,12 +167,15 @@ body{
 .image-container svg{
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 10px;
+    background-color:#0D6EFD;
+    border-radius: 100px;
 }
 
 .image-container svg:hover{
-    background-color:#000000;
-    border-radius: 20px;
+    background-color:#00FF87;
+    border-radius: 100px;
+    cursor: pointer;
 }
 
 .icon-close2{
@@ -174,10 +186,6 @@ body{
 
 .imgFondo{
     padding: 50px;
-}
-
-.imgFondo, h2{
-    text-align: center;
 }
 
 /*Estilos para los formularios de login y registro*/
@@ -225,7 +233,7 @@ p{
 }
 
 #options-menu li:hover {
-    background-color:#96b3ff;
+    background-color:#0D6EFD;
 }
 
 .hidden {
@@ -241,7 +249,7 @@ p{
 /*Boton cerrar sesion*/
 
 #logout-btn {
-    background-color: #000000;
+    background-color: #0D6EFD;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -256,12 +264,12 @@ p{
 
 
 .welcome-container {
-    background-color: white ;
+    background-color: #2A2A2A ;
     padding: 20px;
     border-radius: 15px;
     border-color: #f2f564;
     text-align: center;
-    color: black;
+    color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     margin: 50px auto;
     max-width: 800px;
@@ -274,6 +282,8 @@ p{
 
 .img-fondo{
     width: 150px;
+    height: auto;
+    filter: drop-shadow(0px 0px  10px rgba( 255, 255, 255, 0.9));
 }
 
 /* mensaje que se  muestra cuando no hay resultados para la busqueda*/
@@ -289,7 +299,6 @@ p{
 
 .sinResultados img {
     width: 80px;
-    opacity: 0.7;
 }
 
 .sinResultados h3 {
@@ -421,7 +430,7 @@ p{
     margin-top: 15px;
     color: #ffffff;
     text-decoration: none;
-    background: #014ba0;
+    background: #0D6EFD ;
     border-radius: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -431,4 +440,11 @@ p{
 .tarjeta-articulo:hover .contentbox button{
 top: 0;
 opacity: 1;
+}
+
+.tiempo{
+    position: sticky;
+    background-color: rgb(1,75,160, .5);
+    z-index: 15;
+    bottom: 0;
 }

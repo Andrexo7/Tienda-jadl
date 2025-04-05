@@ -8,7 +8,7 @@ body{
     margin: 0;
     color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #014ba0;
+    background-color: #1E1E1E;
     
 }
     
@@ -22,8 +22,8 @@ header{
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #00276c;
-    border: 2px solid #00276c;
+    background-color: #2A2A2A;
+    border: 2px solid #2A2A2A;
     padding: 10px;
     top: 0;
     z-index: 10;
@@ -75,21 +75,21 @@ header{
 }
     
 .navbar-menu a:hover {
-    background-color: #000000;
+    background-color: #0D6EFD;
     border-radius: 20px;
 }
 
 /*configuracion contador del carrito */
 
 #cuenta-carrito{
-    background-color: #000;
+    background-color: #0D6EFD;
     border-radius: 100%;
     display: inline-block;
-    width: 20px;
+    width: 25px;
+    height: 25px;
     line-height: 20px;
-    aspect-ratio: 1;
+    padding: 2px 2px 2px 2px;
     text-align: center;
-    
 }
 
 .icon-close{
@@ -115,8 +115,14 @@ header{
    
 }
 
+.image-container svg{
+    background-color:#0D6EFD;
+    border-radius: 20px;
+    z-index: 20;
+}
+
 .image-container svg:hover{
-    background-color:#000000;
+    background-color:#00FF87;
     border-radius: 20px;
     z-index: 20;
 }
@@ -221,6 +227,7 @@ ul li a:hover {
 
 /* tarjetas productos que estan en el carrito*/
 #productos-container{
+    margin-top: 10px;
     width: 700px;
     margin-left: 55px;
     float: left;
@@ -229,19 +236,20 @@ ul li a:hover {
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color:#272727 ;
+    background-color:#2A2A2A ;
     margin: 10px;
     border-radius: 20px;
+    box-shadow: -20px -0px 10px 9px rgba(0,0,0,0.3);
 }
 
 .tarjeta-articulo img{
     height: 150px;
     width: 150px;
     aspect-ratio: 1.5;
-
 }
 
 .tarjeta-articulo h3{
+    margin-left: 15px;
     width: 200px;
     text-transform: uppercase;
     font-size:medium;
@@ -253,43 +261,59 @@ ul li a:hover {
 }
 
 #totales{
+    box-shadow: 1px 1px 20px 10px rgba(0,0,0,0.64);
     border-radius: 20px;
     width: 400px;
     height: 400px;
-    margin-top:10px;
+    margin-top: 100px;
     margin-left:200px ;
-    background-color: #272727;
-    border-radius: 20px;
+    background-color: #2A2A2A;
     float: left;
 }
 
 .botones{
     padding: 5px 10px;
-    background-color: #014ba0;
+    background-color: #0D6EFD;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     border: none;
 }
 
-#vaciar{
-    padding: 5px 10px;
-    background-color: #014ba0;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    width:300px ;
-    margin: 10px;
+.botones:hover{
+    background-color: #00FF87;
 }
 
-#comprar{
-    padding: 5px 10px;
-    background-color: #014ba0;
+#vaciar:hover{
+    background-color: #00FF87;
+}
+
+#vaciar{
+    padding: 10px 10px;
+    background-color: #0D6EFD;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     width:300px ;
     margin: 10px;
+    border: none;
+}
+
+
+
+#comprar{
+    padding: 10px 10px;
+    background-color: #0D6EFD;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width:300px ;
+    margin: 10px;
+    border: none;
+}
+
+#comprar:hover{
+    background-color: #00FF87;
 }
     
 
@@ -298,13 +322,30 @@ ul li a:hover {
 
 }
 
+
+#carrito-vacio{
+    text-align: center;
+    background-color: #2A2A2A;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    margin: 40px auto;
+}
+
 #carrito-vacio a {
     color: #ffffff;
     text-decoration: none;
-    background-color: #000000;
+    background-color: #0D6EFD;
     padding: 10px;
     border-radius: 20px;
 
+}
+#carrito-vacio img{
+    display: block;
+    margin: auto;
+    height: 200px;
+    padding: 30px;
 }
  
 
