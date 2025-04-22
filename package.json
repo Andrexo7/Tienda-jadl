@@ -1,0 +1,20 @@
+{
+  "name": "tienda-jadl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrexo7/Tienda-jadl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrexo7/Tienda-jadl/issues"
+  },
+  "homepage": "https://github.com/Andrexo7/Tienda-jadl#readme",
+  "description": ""
+}
